@@ -1,0 +1,83 @@
+button, .btn {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.btn {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: $spacer/5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    color: white;
+    padding-left: $spacer*.5;
+    padding-right: $spacer*.5;
+    @include media-breakpoint-down(xs) {
+        min-width: 144px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-left: $spacer*.75;
+        padding-right: $spacer*.75;
+        min-width: 168px;
+    }
+
+}
+
+.btn-secondary {
+    background-color: $primer;
+    border-color: $primer;
+    &:hover {
+        background-color: lighten($primer, 7%);
+        border-color: lighten($primer, 7%);
+        color: $body-color;
+    }
+}
+
+.mobile--not-full-width {
+    .btn {
+        width: auto;
+        max-width: none;
+    }
+}
+
+.btn.btn-collapse {
+    font-size: 1.35rem;
+    text-transform: none;
+    line-height: 1.22;
+    font-weight: 500;
+    background-color: #fff !important;
+    color: $headings-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8119 10.9906L0.492578 2.39088C-0.164194 1.84383 -0.164194 0.956894 0.492578 0.410116C1.14876 -0.136707 2.21304 -0.136707 2.86917 0.410116L12.0002 8.01951L21.1309 0.410338C21.7873 -0.136484 22.8515 -0.136484 23.5077 0.410338C24.1641 0.95716 24.1641 1.84405 23.5077 2.3911L13.1882 10.9908C12.8599 11.2642 12.4302 11.4007 12.0002 11.4007C11.57 11.4007 11.14 11.2639 10.8119 10.9906Z' fill='%23255103'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 24px 11.4px;
+    background-position: 94% center;
+    text-align: left;
+    padding: 20px;
+    padding-right: 60px;
+    display: block;
+    height: auto;
+    @include media-breakpoint-up(md) {
+        background-position: 98% center;
+    }
+    &:active {
+        border-color: #ebebeb;
+    }
+}
+
+body .gform_wrapper .gform_footer input[type=submit] {
+    @extend .btn;
+    @extend .btn-outline-primary;
+    margin-top: 0 !important;
+}
+
+body .gform_wrapper .gform_footer input[type=submit] {
+    @extend .btn;
+    @extend .btn-primary;
+    color: white;
+    margin-right: $spacer*.5;
+}

@@ -1,0 +1,157 @@
+// Responsive font sizing
+html {
+    font-size: 16px;
+}
+
+// Sets font size to 16px on form elements to prevent input zoom on mobile devices
+@include media-breakpoint-down(sm) {
+    .form-control {
+        font-size: $font-size-base * 1.075;
+    }
+}
+
+// Global
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: $font-family-sans-serif;
+    -webkit-overflow-scrolling: touch;
+    line-height: 1.8;
+}
+
+.small, small {
+    font-size: 70%;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $spacer/2;
+    text-transform: uppercase;
+}
+
+h1, .h1 {
+    font-size: 2.45rem;
+    line-height: 1.05;
+    font-weight: 900;
+    text-transform: none;
+    @include media-breakpoint-up(sm) {
+        font-size: 2.8125rem;
+    }
+    @include media-breakpoint-up(sm) {
+        font-size: 3.125rem;
+    }
+    @include media-breakpoint-up(xxxl) {
+        font-size: 6.25rem;
+    }
+}
+
+h2, .h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-weight: 900;
+    @include media-breakpoint-up(sm) {
+        font-size: 1.9375rem;
+    }
+    @include media-breakpoint-up(xxxl) {
+        font-size: 2.5rem;
+    }
+}
+.fake-h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.22;
+    color: $secondary;
+    @include media-breakpoint-up(xxxl) {
+        font-size: 2rem;
+    }
+}
+.subhead {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: $secondary;
+    @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+    }
+}
+.sub {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.sun {
+    color: $primer;
+}
+
+h3, .h3 {
+    text-transform: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.22;
+    @include media-breakpoint-up(xxxl) {
+        font-size: 2rem;
+    }
+}
+
+h4, .h4, .fz-faq {
+    font-size: 1.25rem;
+    line-height: 1.22;
+    font-weight: 600;
+    @include media-breakpoint-up(xxxl) {
+        font-size: 1.625rem;
+    }
+}
+
+h5, .h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    @include media-breakpoint-up(xxxl) {
+        font-size: 1.3rem;
+    }
+}
+
+h6, .h6, .lead {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: $secondary;
+}
+.home p {
+    max-width: 650px;
+}
+.intro {
+    font-size: 1.25rem;
+    font-weight: 500;
+    @include media-breakpoint-up(xxl) {
+        font-size: 1.6rem;
+    }
+}
+
+.spaced-list {
+    padding: 0 0 0 22px;
+}
+
+.spaced-list li {
+    margin-bottom: .5rem;
+}
+
+.text-md {
+    font-size: 90%;
+}
+
+.list-unstyled li {
+    padding-bottom: .25rem;
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+.list-unstyled {
+    margin-bottom: 1rem;
+}
