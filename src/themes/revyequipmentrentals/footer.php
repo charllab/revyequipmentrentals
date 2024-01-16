@@ -17,7 +17,7 @@
                                 $tel = esc_attr($footer['contact_number']);
                                 $email = $footer['email_address'];
                                 ?>
-                                <span>t:</span> <a href="<?php strip_tel($tel) ?>"><?php echo $tel; ?></a><br>
+                                <span>t:</span> <a href="tel:<?php echo strip_tel($tel) ?>"><?php echo $tel; ?></a><br>
                                 <span>e:</span> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                             </p>
                         </div><!-- col -->
